@@ -1,0 +1,691 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost:8000'
+paths:
+  /api/administrators:
+    get:
+      summary: ''
+      operationId: getApiAdministrators
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiAdministrators
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'This field must be a valid email address.'
+                  example: santina.balistreri@example.net
+                first_name:
+                  type: string
+                  description: ''
+                  example: nihil
+                last_name:
+                  type: string
+                  description: ''
+                  example: autem
+                middle_name:
+                  type: string
+                  description: ''
+                  example: temporibus
+              required:
+                - email
+                - first_name
+                - last_name
+      security: []
+  '/api/administrators/{id}':
+    put:
+      summary: ''
+      operationId: putApiAdministratorsId
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: ''
+                  example: nihil
+                first_name:
+                  type: string
+                  description: ''
+                  example: fugiat
+                last_name:
+                  type: string
+                  description: ''
+                  example: qui
+                middle_name:
+                  type: string
+                  description: ''
+                  example: null
+                role_id:
+                  type: string
+                  description: ''
+                  example: et
+                username:
+                  type: string
+                  description: ''
+                  example: nihil
+                password:
+                  type: string
+                  description: ''
+                  example: sunt
+              required:
+                - email
+                - first_name
+                - last_name
+                - role_id
+                - username
+                - password
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiAdministratorsId
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the administrator.'
+        example: 7
+        required: true
+        schema:
+          type: integer
+  /api/agents:
+    get:
+      summary: ''
+      operationId: getApiAgents
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiAgents
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'This field must be a valid email address.'
+                  example: brielle35@example.net
+                images:
+                  type: string
+                  description: ''
+                  example: tenetur
+                first_name:
+                  type: string
+                  description: ''
+                  example: sunt
+                last_name:
+                  type: string
+                  description: ''
+                  example: doloribus
+                middle_name:
+                  type: string
+                  description: ''
+                  example: earum
+                suffix:
+                  type: string
+                  description: ''
+                  example: in
+                phone:
+                  type: string
+                  description: ''
+                  example: consequuntur
+                province:
+                  type: string
+                  description: ''
+                  example: qui
+                city:
+                  type: string
+                  description: ''
+                  example: tempora
+                zipcode:
+                  type: string
+                  description: ''
+                  example: consequuntur
+                date_hired:
+                  type: string
+                  description: 'This field must be a valid date.'
+                  example: '2023-03-04T09:26:36'
+                start_date:
+                  type: string
+                  description: 'This field must be a valid date.'
+                  example: '2023-03-04T09:26:36'
+                contract:
+                  type: string
+                  description: ''
+                  example: null
+                clearance:
+                  type: string
+                  description: ''
+                  example: null
+              required:
+                - email
+                - first_name
+                - last_name
+                - phone
+                - province
+                - city
+                - zipcode
+                - date_hired
+                - start_date
+      security: []
+  '/api/agents/{id}':
+    put:
+      summary: ''
+      operationId: putApiAgentsId
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: "'id',."
+                  example: consectetur
+                images:
+                  type: string
+                  description: ''
+                  example: ipsum
+                first_name:
+                  type: string
+                  description: ''
+                  example: dolor
+                last_name:
+                  type: string
+                  description: ''
+                  example: atque
+                middle_name:
+                  type: string
+                  description: ''
+                  example: null
+                suffix:
+                  type: string
+                  description: ''
+                  example: null
+                phone:
+                  type: string
+                  description: ''
+                  example: provident
+                province:
+                  type: string
+                  description: ''
+                  example: ratione
+                city:
+                  type: string
+                  description: ''
+                  example: beatae
+                zipcode:
+                  type: string
+                  description: ''
+                  example: error
+                date_hired:
+                  type: string
+                  description: ''
+                  example: non
+                start_date:
+                  type: string
+                  description: ''
+                  example: facere
+                contract:
+                  type: string
+                  description: ''
+                  example: et
+                clearance:
+                  type: string
+                  description: ''
+                  example: quibusdam
+                username:
+                  type: string
+                  description: ''
+                  example: inventore
+                password:
+                  type: string
+                  description: ''
+                  example: facere
+              required:
+                - email
+                - images
+                - first_name
+                - last_name
+                - phone
+                - province
+                - city
+                - zipcode
+                - date_hired
+                - start_date
+                - contract
+                - clearance
+                - username
+                - password
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiAgentsId
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the agent.'
+        example: 8
+        required: true
+        schema:
+          type: integer
+  /api/prospect.update:
+    post:
+      summary: ''
+      operationId: postApiProspectUpdate
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                business_name:
+                  type: string
+                  description: ''
+                  example: tenetur
+                business_number:
+                  type: string
+                  description: ''
+                  example: ut
+                business_province:
+                  type: string
+                  description: ''
+                  example: iusto
+                business_city:
+                  type: string
+                  description: ''
+                  example: molestiae
+                business_zip:
+                  type: string
+                  description: ''
+                  example: recusandae
+                owner_fname:
+                  type: string
+                  description: ''
+                  example: et
+                owner_mname:
+                  type: string
+                  description: ''
+                  example: consequuntur
+                owner_lname:
+                  type: string
+                  description: ''
+                  example: delectus
+                business_type:
+                  type: string
+                  description: ''
+                  example: et
+              required:
+                - business_name
+                - business_number
+                - business_province
+                - business_city
+                - business_zip
+                - owner_fname
+                - owner_mname
+                - owner_lname
+                - business_type
+      security: []
+  '/api/prospect/{id}':
+    patch:
+      summary: ''
+      operationId: patchApiProspectId
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                business_name:
+                  type: string
+                  description: ''
+                  example: atque
+                business_number:
+                  type: string
+                  description: ''
+                  example: veniam
+                business_province:
+                  type: string
+                  description: ''
+                  example: et
+                business_city:
+                  type: string
+                  description: ''
+                  example: vitae
+                business_zip:
+                  type: string
+                  description: ''
+                  example: fugit
+                owner_fname:
+                  type: string
+                  description: ''
+                  example: qui
+                owner_mname:
+                  type: string
+                  description: ''
+                  example: recusandae
+                owner_lname:
+                  type: string
+                  description: ''
+                  example: perferendis
+                business_type:
+                  type: string
+                  description: ''
+                  example: reiciendis
+              required:
+                - business_name
+                - business_number
+                - business_province
+                - business_city
+                - business_zip
+                - owner_fname
+                - owner_mname
+                - owner_lname
+                - business_type
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the prospect.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/prospect.destroy:
+    post:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  '/api/prospects/{id}':
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the prospect.'
+        example: 17
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Endpoints
+    description: ''
